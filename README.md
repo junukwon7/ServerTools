@@ -43,3 +43,8 @@ The documents are published by [GSHS Linux Intro](https://github.com/gshslinuxin
 
 # References
 The connection uses the [Jcraft Jsch](http://www.jcraft.com/jsch/) for ssh communication. It also used JavaFx for the user interface.
+
+# Project info
+This project was made by Junu Kwon(gs19007) in 2021.
+
+Gyeonggi Science High School, Informatics Project class. Advisor(Teacher) was [Suakii](https://github.com/suakii)
