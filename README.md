@@ -20,11 +20,17 @@ There are some special features for GSHS.
 ## Dashboard
 ![image](https://user-images.githubusercontent.com/48399106/126593395-1edabc06-64f0-4033-be4a-767ef95292d3.png)
 
+The GSHS symbol only apears on GSHS servers.
+
 ## Monitor
 ![image](https://user-images.githubusercontent.com/48399106/126592942-5cc3cde5-ef59-43b1-ba9f-9c9b2535294c.png)
 
+The indicator at the upper right means the connection status. Yellow means >5s of lag and red means >10s. Gray means that the connection is paused by the user. Green means that the connection is up to date.
+
 ## Manual
 ![image](https://user-images.githubusercontent.com/48399106/126592967-7a8ef8aa-74c4-4790-ae85-591f6cb38cb7.png)
+
+The documents are published by [GSHS Linux Intro](https://github.com/gshslinuxintro/An-Introduction-to-Linux)
 
 ## SFTP
 ![image](https://user-images.githubusercontent.com/48399106/126592975-3d44e85f-9ed3-41e5-94db-9f7ba3ea59dc.png)
