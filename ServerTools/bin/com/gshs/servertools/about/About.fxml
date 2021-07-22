@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlAbout" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gshs.servertools.about.AboutController">
+   <children>
+      <Pane prefHeight="29.0" prefWidth="500.0" styleClass="linear-grad" stylesheets="@../fullpackstyling.css">
+         <children>
+            <Label layoutX="14.0" layoutY="2.0" prefHeight="25.0" prefWidth="220.0" text="GSHS CSLAB ServerTools 1.0" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <HBox spacing="5.0" />
+      <ImageView fitHeight="117.0" fitWidth="121.0" layoutX="14.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../files/linux_400px_trans.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="26.0" layoutY="59.0" prefHeight="165.0" prefWidth="449.0" text=" 본 프로그램은 2021년 경기과학고등학교 정보과학프로젝트 수업 중 과제를 위해 만들어졌습니다. 또, 경기과학고등학교 리눅스 사용자협회와 GM 서버 관리자 봉사모둠의 작업을 편하게 하기 위한 목적을 가지고 있습니다.&#10;&#10; 본 프로그램을 통해 리눅스 기반 서버에 로그인 시 서버의 CPU, GPU, RAM 사용량을 확인할 수 있으며 서버 사용 및 관리법, SFTP, 오류 보고, 유용한 링크 등 다양한 편의기능을 사용할 수 있습니다.  &#10;&#10;* 정상적 사용을 위해 사용자는 sudo 권한을 가지고 있어야 합니다." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Malgun Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="369.0" text="Copyright©2021 Junu Kwon" />
+      <Label layoutX="374.0" layoutY="239.0" text="19007 권준우">
+         <font>
+            <Font name="Malgun Gothic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+ .dialog-pane{
+  -fx-border-color:transparent;
+  -fx-border-width:20.0px;
+  -fx-background-color: linear-gradient(to bottom left, #42ABCB, #4C7ABB);
+ }
+
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.0em 0.0em 0.0em 0.0em;
+    -fx-background-color: transparent;
+   -fx-text-fill:white;
+   -fx-font-size:10.0px;
+}
+
+/**Costumization of DialogPane Header**/
+.dialog-pane:header .header-panel {
+  -fx-background-color: transparent;
+}
+
+.dialog-pane:header .header-panel .label{
+  -fx-background-color: transparent;
+  -fx-background-radius: 0px;
+  -fx-text-fill:white;
+  -fx-font-weight:bold;
+  -fx-font-size:17.0px;
+}
+
+
+
+.button
+{
+-fx-background-color : #FFFFFF;
+-fx-text-fill : #000000;
+-fx-background-radius : 0;
+-fx-border-radius : 0;
+}
+.button:hover
+{
+-fx-text-fill : #FFFFFF;
+-fx-background-color : #44698F ;
+-fx-background-radius : 0;
+-fx-border-radius : 0;
+}
+.button:pressed
+{
+-fx-background-color : #4A6374 ;
+-fx-background-radius : 0;
+-fx-border-radius : 0;
+}

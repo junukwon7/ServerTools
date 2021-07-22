@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="PaneRoot" fx:id="archRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="900.0" stylesheets="@fullpackstyling.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gshs.servertools.RootController">
+	<children>
+		<StackPane fx:id="pnlStackRoot" prefHeight="630.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+			<children>
+            <Pane fx:id="monitorPane" prefHeight="630.0" prefWidth="900.0">
+               <children>
+                  <AnchorPane prefHeight="630.0" prefWidth="900.0" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+                     <children>
+                        <TabPane prefHeight="630.0" prefWidth="900.0" stylesheets="@fullpackstyling.css" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="30.0" tabMaxWidth="70.0" tabMinHeight="30.0" tabMinWidth="70.0">
+                          <tabs>
+                              <Tab text="Dashboard">
+                                 <content>
+                                    <AnchorPane id="archMonitorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fff;" styleClass="pane" stylesheets="@fullpackstyling.css">
+                                       <children>
+                                          <HBox layoutX="23.0" layoutY="254.0" prefHeight="170.0" prefWidth="290.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="93.0">
+                                                   <children>
+                                                      <Label minHeight="28.0" text="Host">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="10.0" minHeight="28.0" text="Port">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="27.0" minHeight="28.0" text="Username">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="61.0" minHeight="28.0" text="Division">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="61.0" minHeight="28.0" text="Student ID">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="10.0" layoutY="44.0" minHeight="28.0" text="Connected on">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="170.0" prefWidth="205.0">
+                                                   <children>
+                                                      <Label fx:id="boardHost" minHeight="28.0" prefHeight="20.0" prefWidth="112.0" text="_127.0.0.1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="boardPort" layoutX="10.0" layoutY="10.0" minHeight="28.0" prefHeight="20.0" prefWidth="112.0" text="_22">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="boardUsername" layoutX="10.0" layoutY="27.0" minHeight="28.0" prefHeight="20.0" prefWidth="161.0" text="_username">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="boardDivision" layoutX="10.0" layoutY="61.0" minHeight="28.0" text="_GSHS">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="boardID" layoutX="10.0" layoutY="61.0" minHeight="28.0" prefHeight="20.0" prefWidth="73.0" text="_gs00000">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="boardStart" layoutX="10.0" layoutY="44.0" minHeight="28.0" prefHeight="28.0" prefWidth="207.0" text="_00:00:00">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <ImageView fitHeight="138.0" fitWidth="149.0" layoutX="76.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../files/linux_400px_trans.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" layoutX="71.0" layoutY="14.0" prefHeight="27.0" prefWidth="149.0" text="GSHS ServerTools" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <WebView fx:id="hostView" layoutX="313.0" layoutY="43.0" prefHeight="552.0" prefWidth="582.0" />
+                                          <TextField fx:id="webField" layoutX="313.0" layoutY="14.0" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="498.0" />
+                                          <Button fx:id="btnWeb" layoutX="811.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="84.0" styleClass="button1s" stylesheets="@fullpackstyling.css" text="Connect" />
+                                          <VBox layoutX="17.0" layoutY="480.0" prefHeight="111.0" prefWidth="256.0">
+                                             <children>
+                                                <Hyperlink fx:id="bfs" layoutX="10.0" layoutY="10.0" onAction="#handleButtonAction" styleClass="hyper1" stylesheets="@fullpackstyling.css" text="Bfstudy GM page">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Hyperlink fx:id="kakao" layoutX="10.0" layoutY="33.0" onAction="#handleButtonAction" styleClass="hyper1" stylesheets="@fullpackstyling.css" text="Kakaotalk open room">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Hyperlink fx:id="git" layoutX="10.0" layoutY="56.0" onAction="#handleButtonAction" styleClass="hyper1" stylesheets="@fullpackstyling.css" text="GSHS Linux Society(github)">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                                <Hyperlink fx:id="over" layoutX="10.0" layoutY="79.0" onAction="#handleButtonAction" styleClass="hyper1" stylesheets="@fullpackstyling.css" text="Documents(overleaf)">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Hyperlink>
+                                             </children>
+                                          </VBox>
+                                          <Label layoutX="23.0" layoutY="227.0" prefHeight="27.0" prefWidth="199.0" text="Connection Information" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="23.0" layoutY="453.0" prefHeight="27.0" prefWidth="199.0" text="Useful Links" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                            <Tab text="Monitor">
+                                 <content>
+                        				<AnchorPane id="archMonitorPane" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fff;" styleClass="pane" stylesheets="@fullpackstyling.css">
+                        				   <children>
+                                          <Pane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #fff;">
+                                             <children>
+                              				      <LineChart fx:id="ramchart" layoutX="450.0" layoutY="14.0" prefHeight="284.0" prefWidth="429.0" title="RAM" titleSide="TOP">
+                              				        <xAxis>
+                              				          <CategoryAxis side="BOTTOM" />
+                              				        </xAxis>
+                              				        <yAxis>
+                              				          <NumberAxis side="LEFT" />
+                              				        </yAxis>
+                              				      </LineChart>
+                              				      <LineChart fx:id="cpuchart" layoutX="14.0" layoutY="14.0" prefHeight="284.0" prefWidth="429.0" title="CPU">
+                              				         <xAxis>
+                              				            <CategoryAxis side="BOTTOM" />
+                              				         </xAxis>
+                              				         <yAxis>
+                              				            <NumberAxis side="LEFT" />
+                              				         </yAxis>
+                              				      </LineChart>
+                              				      <LineChart fx:id="gpuusechart" layoutX="14.0" layoutY="295.0" prefHeight="284.0" prefWidth="429.0" title="GPU" titleSide="TOP">
+                              				         <xAxis>
+                              				            <CategoryAxis side="BOTTOM" />
+                              				         </xAxis>
+                              				         <yAxis>
+                              				            <NumberAxis side="LEFT" />
+                              				         </yAxis>
+                              				      </LineChart>
+                                                <LineChart fx:id="gpumemchart" layoutX="450.0" layoutY="295.0" prefHeight="284.0" prefWidth="429.0" title="GPU Memory" titleSide="TOP">
+                                                   <xAxis>
+                                                      <CategoryAxis side="BOTTOM" />
+                                                   </xAxis>
+                                                   <yAxis>
+                                                      <NumberAxis side="LEFT" />
+                                                   </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </Pane>
+                        				   </children>
+                        				</AnchorPane>
+                                 </content>
+                            </Tab>
+                              <Tab text="Manual">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <WebView fx:id="docWeb" layoutY="-84.0" prefHeight="685.0" prefWidth="900.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="SFTP">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox alignment="CENTER" layoutX="30.0" layoutY="160.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="840.0">
+                                             <children>
+                                                <VBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label maxHeight="30.0" minHeight="30.0" text="Your Computer" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0">
+                                                         <children>
+                                                            <TextField fx:id="filePathPC" maxHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="235.0" promptText="Select the file/directory or write the file path" />
+                                                            <MenuButton fx:id="searchFile" maxWidth="65.0" minHeight="30.0" minWidth="65.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="65.0" styleClass="button3" stylesheets="@fullpackstyling.css" text="Select">
+                                                              <items>
+                                                                <MenuItem fx:id="btnSearchFile" mnemonicParsing="false" onAction="#handleButtonAction" text="Select file" />
+                                                                <MenuItem fx:id="btnSearchDir" mnemonicParsing="false" onAction="#handleButtonAction" text="Select folder" />
+                                                              </items>
+                                                            </MenuButton>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" maxHeight="30.0" minHeight="30.0" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label maxWidth="60.0" minWidth="60.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="140.0">
+                                                   <children>
+                                                      <Button fx:id="sftpSend" alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="80.0" minHeight="-Infinity" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" styleClass="button3" stylesheets="@fullpackstyling.css" text=" ▶">
+                                                         <font>
+                                                            <Font name="Cambria" size="15.0" />
+                                                         </font></Button>
+                                                      <Label prefHeight="23.0" prefWidth="28.0" />
+                                                      <Button fx:id="sftpGet" layoutX="50.0" layoutY="95.0" maxHeight="-Infinity" maxWidth="80.0" minHeight="-Infinity" minWidth="80.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="80.0" styleClass="button3" stylesheets="@fullpackstyling.css" text="◀ ">
+                                                         <font>
+                                                            <Font name="Cambria" size="15.0" />
+                                                         </font></Button>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="350.0">
+                                                   <children>
+                                                      <Label maxHeight="30.0" minHeight="30.0" text="The Server" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="400.0">
+                                                         <children>
+                                                            <TextField fx:id="filePathServer" maxHeight="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="write the file path" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox maxHeight="30.0" minHeight="30.0" prefHeight="100.0" prefWidth="200.0" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab text="Help">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                                       <children>
+                                          <WebView fx:id="viewHelp" layoutY="-86.0" prefHeight="874.0" prefWidth="900.0" />
+                                       </children></AnchorPane>
+                                </content>
+                              </Tab>
+                          </tabs>
+                           <padding>
+                              <Insets top="-7.0" />
+                           </padding>
+                        </TabPane>
+                        <MenuBar layoutX="761.0" prefHeight="31.0" prefWidth="138.0" styleClass="linear-grad" stylesheets="@fullpackstyling.css">
+                          <menus>
+                            <Menu mnemonicParsing="false" text="Settings">
+                               <items>
+                                    <MenuItem fx:id="menuClear" mnemonicParsing="false" onAction="#handleMenuEvent" text="Clear" />
+                                <MenuItem fx:id="menuReconnect" mnemonicParsing="false" onAction="#handleMenuEvent" text="Reconnect" />
+                                    <MenuItem fx:id="menuStop" mnemonicParsing="false" onAction="#handleMenuEvent" text="Pause" />
+                                <MenuItem fx:id="menuLogout" mnemonicParsing="false" onAction="#handleMenuEvent" text="Exit" />
+                               </items>
+                            </Menu>
+                              <Menu mnemonicParsing="false" text="About">
+                                <items>
+                                  <MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#handleMenuEvent" text="About the program" />
+                                </items>
+                              </Menu>
+                          </menus>
+                        </MenuBar>
+                        <AnchorPane layoutX="751.0" layoutY="9.0" prefHeight="12.0" prefWidth="12.0">
+                           <children>
+                              <Circle fx:id="indicator" fill="#27c941" layoutX="6.0" layoutY="6.0" radius="6.0" stroke="WHITE" strokeType="INSIDE" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Pane fx:id="loginPane" prefHeight="630.0" prefWidth="900.0">
+               <children>
+         				<AnchorPane id="archLoginPane" layoutY="30.0" prefHeight="600.0" prefWidth="900.0">
+         				   <children>
+         				      <BorderPane layoutY="-30.0" prefHeight="630.0" prefWidth="900.0" style="-fx-background-color: #fff;">
+         				         <left>
+         				            <Pane prefHeight="600.0" prefWidth="500.0" styleClass="linear-grad" stylesheets="@fullpackstyling.css" BorderPane.alignment="CENTER">
+         				               <children>
+         				                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="200.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         				                     <image>
+         				                        <Image url="@../../../files/linux_400px_trans.png" />
+         				                     </image>
+         				                  </ImageView>
+         				                  <Label alignment="CENTER" layoutX="189.0" layoutY="250.0" text="ServerTools" textFill="#e8e8e8">
+         				                     <font>
+         				                        <Font size="24.0" />
+         				                     </font>
+         				                  </Label>
+         				                  <Label alignment="CENTER" layoutX="195.0" layoutY="282.0" text="GSHS Linux Society" textFill="#c9c9c9">
+         				                     <font>
+         				                        <Font size="13.0" />
+         				                     </font>
+         				                  </Label>
+                                    <Label layoutX="14.0" layoutY="599.0" text="Copyright©2021 Junu Kwon (gs19007)" textFill="#d0d0d0" />
+         				               </children>
+         				            </Pane>
+         				         </left>
+         				         <center>
+         				            <StackPane fx:id="pnlStack" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         				               <children>
+         				                  <Pane fx:id="pnlSignUp" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+         				                     <children>
+         				                        <Button fx:id="btnSave" layoutX="201.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="120.0" styleClass="button1" stylesheets="@fullpackstyling.css" text="Save" />
+         				                        <TextField fx:id="sshHost" layoutX="76.0" layoutY="130.0" prefHeight="35.0" prefWidth="245.0" promptText="Host" />
+         				                        <Label layoutX="74.0" layoutY="92.0" text="Confugure SSH" textFill="#017dbb">
+         				                           <font>
+         				                              <Font name="System Bold" size="18.0" />
+         				                           </font>
+         				                        </Label>
+         				                        <ImageView fx:id="btnBack" fitHeight="30.0" fitWidth="30.0" layoutX="63.0" layoutY="35.0" onMouseClicked="#handleMouseEvent" pickOnBounds="true" preserveRatio="true">
+         				                           <image>
+         				                              <Image url="@../../../files/icons8_back_30px.png" />
+         				                           </image>
+         				                        </ImageView>
+         				                        <TextField fx:id="sshPort" layoutX="76.0" layoutY="183.0" prefHeight="35.0" prefWidth="245.0" promptText="Port" />
+         				                     </children>
+         				                  </Pane>
+         				                  <Pane fx:id="pnlSignIn" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+         				                     <children>
+         				                        <TextField fx:id="sshUsername" layoutX="76.0" layoutY="130.0" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="245.0" promptText="Username" />
+         				                        <PasswordField fx:id="sshPassword" layoutX="76.0" layoutY="183.0" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
+         				                        <Button fx:id="btnSSH" layoutX="201.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="120.0" styleClass="button1" stylesheets="@fullpackstyling.css" text="Connect" />
+         				                        <Button fx:id="btnConfigure" layoutX="76.0" layoutY="229.0" mnemonicParsing="false" onAction="#handleButtonAction" opacity="0.6" prefHeight="35.0" prefWidth="120.0" styleClass="button2" stylesheets="@fullpackstyling.css" text="Configure SSH" />
+                        				                        <Label layoutX="74.0" layoutY="92.0" text="SSH Connection" textFill="#017dbb">
+                        				                           <font>
+                        				                              <Font name="System Bold" size="18.0" />
+                        				                           </font>
+                        				                        </Label>
+                                          <Label fx:id="labelFailed" layoutX="224.0" layoutY="283.0" opacity="0.0" prefHeight="17.0" prefWidth="97.0" text="Connection failed" textAlignment="RIGHT" textFill="#ff3a3a" />
+         				                     </children>
+         				                  </Pane>
+         				               </children>
+         				            </StackPane>
+         				         </center>
+         				      </BorderPane>
+         				   </children>
+         				</AnchorPane>
+               </children>
+            </Pane>
+			</children>
+		</StackPane>
+	</children>
+</AnchorPane>
